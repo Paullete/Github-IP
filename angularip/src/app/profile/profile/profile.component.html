@@ -7,7 +7,7 @@
           <input type="text" class="form-control" placeholder="Enter Username..." [(ngModel)]="username" name="username"
             style="text-align:center">
         </div>&nbsp;&nbsp;
-        <div><button class="btn btn-success" (click)="searchUser()">Search</button></div>
+        <div><button class="btn btn-success bg-info " (click)="searchUser()">Search</button></div>
       </form>
     </div>
   </div>
@@ -23,7 +23,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12 text-center">
             <img class="img-thumbnail myimg" src="{{user.avatar_url}}">
             <p class="pt-3">
-              <a class="btn btn-success btn-block" target="_blank" href="{{user.html_url}}">View Profile</a>
+              <a class="btn btn-success bg-info btn-block" target="_blank" href="{{user.html_url}}">View Profile</a>
             </p>
           </div>
 
@@ -32,7 +32,7 @@
               <p class="text-white" style="font-size: 20px;">{{user.bio}}</p>
               <span class="label label-success text-pink bg-primary p-1">{{user.public_repos}} Public
                 Repositories</span>&nbsp;
-              <span class="label label-info text-pink bg-success p-1">{{user.followers}} Followers</span>&nbsp;
+              <span class="label label-info text-pink bg-light p-1">{{user.followers}} Followers</span>&nbsp;
               <span class="label label-info text-pink bg-info p-1">{{user.following}} Following</span>&nbsp;
             </div>
             <br />
@@ -66,7 +66,7 @@
             Created on {{repos.created_at | date}}
           </p>
           <div class="card-footer text-center">
-            <a href="{{repos.html_url }}" class="pb-2" target="_blank"><button class="btn btn-success">check
+            <a href="{{repos.html_url }}" class="pb-2" target="_blank"><button class="btn btn-info">view
                 repo</button> </a>
           </div>
 
