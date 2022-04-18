@@ -13,7 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 ## Project live site
-  This is the live [link](https://Paullete.github.io/GITHUB-IP)
+   https://paullete.github.io/Github-IP/
 
   The app looks like this: 
   ![Image](./angularip/src/assets/Screenshot%20from%202022-04-18%2013-01-33.png)
