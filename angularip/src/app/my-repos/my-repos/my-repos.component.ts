@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyReposComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  user: any= [];
+  repos: any= [];
+  username!: string;
+  constructor(private _githubService: GithubService) {
+    this._githubService.getUser().subscribe(user => {
+      console.log(user);
+      this.user = user;
+    });
+    this._githubService.getRepos().subscribe(repos => {
+      this.repos = repos;
+    });
   }
+  ngOnInit() {
+  }
+   searchUser() {
+     this._githubService.updateUser(this.username);
+     this._githubService.getUser().subscribe(user => {
+       this.user = user;
+     });
+     this._githubService.getRepos().subscribe(repos => {
+       this.repos = repos;
+     });
 
-}
+   }
+} 
